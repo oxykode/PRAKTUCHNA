@@ -66,7 +66,7 @@ int second(){
     int k;
     cout << "Input 0 < |Number| < 1: ";
     cin >> x;
-    cout << "Input epsilon ";
+    cout << "Epsilon: ";
     cin >> epsilon;
     Y = exp(2*x);
 
@@ -78,12 +78,12 @@ int second(){
         k += 1;
         term = term * (2 * x) / k;
     }
-    while (fabs(k) >= epsilon);
+    while (fabs(term) >= epsilon);
 
     error = fabs(S-Y);
-    cout << "Y(x) = " << setprecision(6) << Y << endl;
-    cout << "S(x) = " << setprecision(6) << S << endl;
-    cout << "|S(x) - Y(x)| = " << setprecision(6) << error << endl;
+    cout << "Y(x) = " << setprecision(8) << Y << endl;
+    cout << "S(x) = " << setprecision(8) << S << endl;
+    cout << "|S(x) - Y(x)| = " << setprecision(8) << error << endl;
     return 0;
 }
 
